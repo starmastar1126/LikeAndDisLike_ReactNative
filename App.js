@@ -9,8 +9,6 @@ import {
     Dimensions,
     FlatList
 } from 'react-native';
-import SearchingList from './src/views/SearchingList';
-
 
 const { width } = Dimensions.get('window');
 
@@ -178,23 +176,23 @@ export default class HomeScreen extends Component {
                     >
 
                         <Animated.View
-                            // style={{
-                            //     justifyContent: 'center',
-                            //     alignItems: 'center',
-                            //     transform: [
-                            //         {
-                            //             translateX: translateXTabOne
-                            //         }
-                            //     ]
-                            // }}
+                            style={{
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                transform: [
+                                    {
+                                        translateX: translateXTabOne
+                                    }
+                                ]
+                            }}
                             onLayout={event =>
                                 this.setState({ translateY: event.nativeEvent.layout.height })
                             }>
-                            <SearchingList />
 
-                            {/* <Text style={{ fontSize: 25 }}>Here is the second Tab.
+                           
+                            <Text style={{ fontSize: 25 }}>Here is the second Tab.
                             Here is the first Tab.
-                            </Text> */}
+                            </Text>
                         </Animated.View>
 
                         <Animated.View
@@ -210,9 +208,9 @@ export default class HomeScreen extends Component {
                                     }
                                 ]
                             }}>
-                            {/* <Text style={{ fontSize: 25 }}>Here is the second Tab.
+                            <Text style={{ fontSize: 25 }}>Here is the second Tab.
                             Here is the second Tab.
-                            </Text> */}
+                            </Text>
                         </Animated.View>
 
                     </ScrollView>
